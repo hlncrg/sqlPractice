@@ -16,6 +16,7 @@ FROM
     USING(memid)
     WHERE starttime::date='2012-09-14') AS t1
 WHERE cost>30
+--or
 SELECT concat(firstname,' ',surname) AS member,
     name AS facility,
 CASE memid WHEN 0 THEN guestcost*slots
